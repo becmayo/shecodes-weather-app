@@ -14,8 +14,52 @@
     <title>Bec's Weather</title>
   </head>
   <body>
-    <div class="container"></div>
-      <h1>Weather App</h1>
+    <div class="app">
+      <div class="container">
+        <div class="weather">
+          <form>
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Enter a city"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  class="btn btn-primary w-100"
+                  value="Search"
+                />
+              </div>
+            </div>
+          </form>
+          <div class="weather-info">
+            <div class="row">
+              <div class="col-6">
+                <h1>Adelaide</h1>
+                <ul>
+                  <li><span>Thursday, 10:00</span></li>
+                  <li><span>Sunny</span></li>
+                  <li>
+                    Humidity: <span>56%</span>, Wind: <span>3.5</span>km/h
+                  </li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <div class="temperature-container d-flex justify-content-end">
+                  <img src="icons/sun-icon.png" width="80" height="80" />
+                  <div>
+                    <span class="temperature">25</span>
+                    <span class="unit">°C</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="src/app.js"></script>
   </body>

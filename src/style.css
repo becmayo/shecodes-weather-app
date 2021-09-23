@@ -1,1 +1,32 @@
+.app {
+  max-width: 600px;
+  margin: 60px auto;
+}
 
+.weather form {
+  padding-bottom: 30px;
+}
+
+.weather-info {
+  margin-top: 20px;
+}
+
+.weather-info ul {
+  margin: 0;
+  padding: 0;
+}
+.weather-info li {
+  list-style: none;
+  color: rgba(39, 33, 66, 0.4);
+}
+
+.weather .temperature {
+  font-size: 80px;
+  line-height: 1;
+}
+
+.weather .unit {
+  font-size: 28px;
+  position: relative;
+  top: -34px;
+}
