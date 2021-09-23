@@ -5,6 +5,7 @@
 
 .weather form {
   padding-bottom: 30px;
+  border-bottom: 1px solid #f9f7fe;
 }
 
 .weather-info {
@@ -17,7 +18,7 @@
 }
 .weather-info li {
   list-style: none;
-  color: rgba(39, 33, 66, 0.4);
+  color: rgba(39, 39, 39, 0.4);
 }
 
 .weather .temperature {
@@ -29,4 +30,26 @@
   font-size: 28px;
   position: relative;
   top: -34px;
+}
+
+.weather-forecast {
+  text-align: center;
+  margin: 40px 0;
+  border-bottom: 1px solid #f9f7fe;
+  padding-bottom: 50px;
+}
+
+.weather-forecast .forecast-day {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.weather-forecast img {
+  margin: 10px auto;
+}
+
+.weather-forecast .forecast-temperature {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 700;
 }
