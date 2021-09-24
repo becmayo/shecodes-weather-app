@@ -39,6 +39,11 @@
   text-decoration: none;
 }
 
+.weather .unit .active {
+  cursor: default;
+  color: #212529;
+}
+
 .weather-forecast {
   text-align: center;
   margin: 40px 0;
