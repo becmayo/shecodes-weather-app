@@ -10,6 +10,7 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Bec's Weather</title>
   </head>
@@ -17,7 +18,7 @@
     <div class="app">
       <div class="container">
         <div class="weather">
-          <form>
+          <form id="city-search">
             <div class="row">
               <div class="col-9">
                 <input
@@ -38,12 +39,15 @@
           <div class="weather-info">
             <div class="row">
               <div class="col-6">
-                <h1>Adelaide</h1>
+                <h1 id="city"></h1>
                 <ul>
-                  <li><span>Thursday, 10:00</span></li>
-                  <li><span>Sunny</span></li>
                   <li>
-                    Humidity: <span>56%</span>, Wind: <span>3.5</span>km/h
+                    <span id="day-time"></span>
+                  </li>
+                  <li><span id="weather-description"></span></li>
+                  <li>
+                    Humidity: <span id="humidity"></span>%, Wind:
+                    <span id="wind-speed"></span>km/h
                   </li>
                 </ul>
               </div>
@@ -51,10 +55,10 @@
                 <div class="temperature-container d-flex justify-content-end">
                   <img src="icons/sun-icon.png" width="80" height="80" />
                   <div>
-                    <span class="temperature">25</span>
+                    <span class="temperature" id="main-temp"></span>
                     <span class="unit">
-                      <span class="celsius-unit">°C</span> |
-                      <span class="fahrenheit-unit">°F</span></span
+                      <a class="celsius-unit" href="#">°C</a> |
+                      <a class="fahrenheit-unit" href="#">°F</a></span
                     >
                   </div>
                 </div>

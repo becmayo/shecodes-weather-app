@@ -19,6 +19,7 @@
 .weather-info li {
   list-style: none;
   color: rgba(39, 39, 39, 0.4);
+  text-transform: capitalize;
 }
 
 .weather .temperature {
@@ -30,6 +31,10 @@
   font-size: 28px;
   position: relative;
   top: -34px;
+}
+
+.weather .unit a {
+  text-decoration: none;
 }
 
 .weather-forecast {
