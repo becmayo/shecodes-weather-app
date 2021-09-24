@@ -19,6 +19,8 @@
 .weather-info li {
   list-style: none;
   color: rgba(39, 39, 39, 0.4);
+}
+.weather-info li::first-letter {
   text-transform: capitalize;
 }
 
