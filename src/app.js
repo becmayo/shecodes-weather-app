@@ -49,13 +49,19 @@ function userCity(cityInput) {
 }
 
 function displayTemperature(response) {
+  console.log(response.data);
   let currentTemp = Math.round(response.data.main.temp);
   let mainTempElement = document.querySelector("#main-temp");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#weather-description");
   let humidityElement = document.querySelector("#humidity");
   let windSpeedElement = document.querySelector("#wind-speed");
+  let mainIconElement = document.querySelector("#main-icon");
   mainTempElement.innerHTML = currentTemp;
+  mainIconElement.setAttribute(
+    "src",
+    `icons/${response.data.weather[0].icon}.png`
+  );
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
