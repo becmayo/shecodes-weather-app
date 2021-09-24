@@ -36,6 +36,20 @@ function showPosition(position) {
   axios.get(apiUrl).then(displayTemperature);
 }
 
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("input#city-input");
+  userCity(cityInput);
+}
+function userCity(cityInput) {
+  currentTime();
+  console.log(cityInput.value);
+  let city = cityInput.value;
+  let apiKey = "d34bf6dc9d2d08c43bc76d224bf2c78a";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
 function displayTemperature(response) {
   console.log(response.data);
   let currentTemp = Math.round(response.data.main.temp);
@@ -55,7 +69,5 @@ currentTime();
 
 navigator.geolocation.getCurrentPosition(showPosition);
 
-let apiKey = "d34bf6dc9d2d08c43bc76d224bf2c78a";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=adelaide&appid=${apiKey}&units=metric`;
-
-axios.get(apiUrl).then(displayTemperature);
+let citySearch = document.querySelector("#city-search");
+citySearch.addEventListener("submit", handleSubmit);
