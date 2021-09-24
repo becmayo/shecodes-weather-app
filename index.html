@@ -15,123 +15,121 @@
     <title>Bec's Weather</title>
   </head>
   <body>
-    <div class="app">
-      <div class="container">
-        <div class="weather">
-          <form id="city-search">
-            <div class="row">
-              <div class="col-9">
-                <input
-                  type="search"
-                  placeholder="Enter a city"
-                  class="form-control"
-                  id="city-input"
-                />
-              </div>
-              <div class="col-3">
-                <input
-                  type="submit"
-                  class="btn btn-primary w-100"
-                  value="Search"
-                />
-              </div>
-            </div>
-          </form>
-          <div class="weather-info">
-            <div class="row">
-              <div class="col-6">
-                <h1 id="city"></h1>
-                <ul>
-                  <li>Last updated: <span id="day-time"></span></li>
-                  <li><span id="weather-description"></span></li>
-                  <li>
-                    Humidity: <span id="humidity"></span>%, Wind:
-                    <span id="wind-speed"></span>km/h
-                  </li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <div class="temperature-container d-flex justify-content-end">
-                  <img
-                    src="icons/01d.png"
-                    width="80"
-                    height="80"
-                    id="main-icon"
+    <div class="background">
+      <div class="app">
+        <div class="container">
+          <div class="weather">
+            <form id="city-search">
+              <div class="row">
+                <div class="col-9">
+                  <input
+                    type="search"
+                    placeholder="Enter a city"
+                    class="form-control"
+                    id="city-input"
                   />
-                  <div>
-                    <span class="temperature" id="main-temp"></span>
-                    <span class="unit">
-                      <a class="active" id="celsius-unit" href="#">°C</a>
-                      |
-                      <a class="fahrenheit-unit" id="fahrenheit-unit" href="#"
-                        >°F</a
-                      ></span
-                    >
+                </div>
+                <div class="col-3">
+                  <input type="submit" class="btn w-100" value="Search" />
+                </div>
+              </div>
+            </form>
+            <div class="weather-info">
+              <div class="row">
+                <div class="col-6">
+                  <h1 id="city"></h1>
+                  <ul>
+                    <li>Last updated: <span id="day-time"></span></li>
+                    <li><span id="weather-description"></span></li>
+                    <li>
+                      Humidity: <span id="humidity"></span>%, Wind:
+                      <span id="wind-speed"></span>km/h
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <div class="temperature-container d-flex justify-content-end">
+                    <img
+                      src="icons/01d.png"
+                      width="80"
+                      height="80"
+                      id="main-icon"
+                    />
+                    <div>
+                      <span class="temperature" id="main-temp"></span>
+                      <span class="unit">
+                        <a class="active" id="celsius-unit" href="#">°C</a>
+                        |
+                        <a class="fahrenheit-unit" id="fahrenheit-unit" href="#"
+                          >°F</a
+                        ></span
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="weather-forecast row">
+              <div class="col">
+                <div class="forecast-preview">
+                  <div class="forecast-day">Fri</div>
+                  <img src="icons/01d.png" width="60" height="60" />
+                  <div class="forecast-temperature">
+                    <span class="forecast-temperature-max">26°</span> /
+                    <span class="forecast-temperature-min">19°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="forecast-preview">
+                  <div class="forecast-day">Sat</div>
+                  <img src="icons/01d.png" width="60" height="60" />
+                  <div class="forecast-temperature">
+                    <span class="forecast-temperature-max">26°</span> /
+                    <span class="forecast-temperature-min">19°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="forecast-preview">
+                  <div class="forecast-day">Sun</div>
+                  <img src="icons/01d.png" width="60" height="60" />
+                  <div class="forecast-temperature">
+                    <span class="forecast-temperature-max">26°</span> /
+                    <span class="forecast-temperature-min">19°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="forecast-preview">
+                  <div class="forecast-day">Mon</div>
+                  <img src="icons/01d.png" width="60" height="60" />
+                  <div class="forecast-temperature">
+                    <span class="forecast-temperature-max">26°</span> /
+                    <span class="forecast-temperature-min">19°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="forecast-preview">
+                  <div class="forecast-day">Tues</div>
+                  <img src="icons/01d.png" width="60" height="60" />
+                  <div class="forecast-temperature">
+                    <span class="forecast-temperature-max">26°</span> /
+                    <span class="forecast-temperature-min">19°</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <footer>
+              <a
+                href="https://github.com/becmayo/shecodes-weather-app"
+                target="_blank"
+                >Open-source code</a
+              >
+              by Rebecca Mayo
+            </footer>
           </div>
-          <div class="weather-forecast row">
-            <div class="col">
-              <div class="forecast-preview">
-                <div class="forecast-day">Fri</div>
-                <img src="icons/01d.png" width="60" height="60" />
-                <div class="forecast-temperature">
-                  <span class="forecast-temperature-max">26°</span> /
-                  <span class="forecast-temperature-min">19°</span>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="forecast-preview">
-                <div class="forecast-day">Sat</div>
-                <img src="icons/01d.png" width="60" height="60" />
-                <div class="forecast-temperature">
-                  <span class="forecast-temperature-max">26°</span> /
-                  <span class="forecast-temperature-min">19°</span>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="forecast-preview">
-                <div class="forecast-day">Sun</div>
-                <img src="icons/01d.png" width="60" height="60" />
-                <div class="forecast-temperature">
-                  <span class="forecast-temperature-max">26°</span> /
-                  <span class="forecast-temperature-min">19°</span>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="forecast-preview">
-                <div class="forecast-day">Mon</div>
-                <img src="icons/01d.png" width="60" height="60" />
-                <div class="forecast-temperature">
-                  <span class="forecast-temperature-max">26°</span> /
-                  <span class="forecast-temperature-min">19°</span>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="forecast-preview">
-                <div class="forecast-day">Tues</div>
-                <img src="icons/01d.png" width="60" height="60" />
-                <div class="forecast-temperature">
-                  <span class="forecast-temperature-max">26°</span> /
-                  <span class="forecast-temperature-min">19°</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <footer>
-            <a
-              href="https://github.com/becmayo/shecodes-weather-app"
-              target="_blank"
-              >Open-source code</a
-            >
-            by Rebecca Mayo
-          </footer>
         </div>
       </div>
     </div>

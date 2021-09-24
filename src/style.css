@@ -1,11 +1,36 @@
+body {
+  background: #e0ffcd;
+}
+
 .app {
-  max-width: 600px;
+  max-width: 800px;
   margin: 60px auto;
+}
+
+.weather {
+  background: #fdffcd;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
 }
 
 .weather form {
   padding-bottom: 30px;
-  border-bottom: 1px solid #f9f7fe;
+  border-bottom: 1px solid#ffebbb;
+}
+
+.weather .form-control {
+  border: none;
+  background-color: #ffebbb;
+}
+
+.btn {
+  background-color: #ffcab0;
+  color: white;
+}
+
+.btn:hover {
+  color: #e46161;
 }
 
 .weather-info {
@@ -37,6 +62,11 @@
 
 .weather .unit a {
   text-decoration: none;
+  color: #ffcab0;
+}
+
+.weather .unit a:hover {
+  color: #e46161;
 }
 
 .weather .unit .active {
@@ -44,10 +74,14 @@
   color: #212529;
 }
 
+.weather .unit .active:hover {
+  color: #212529;
+}
+
 .weather-forecast {
   text-align: center;
   margin: 40px 0;
-  border-bottom: 1px solid #f9f7fe;
+  border-bottom: 1px solid #ffebbb;
   padding-bottom: 50px;
 }
 
@@ -69,4 +103,8 @@
 footer {
   text-align: center;
   font-size: 12px;
+}
+
+footer a {
+  color: #e46161;
 }
