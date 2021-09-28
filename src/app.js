@@ -67,6 +67,31 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windSpeedElement.innerHTML = response.data.wind.speed;
   currentTime();
+  displayForecast();
+}
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tues"];
+  let forecastHTML = `<div class = "row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `         <div class="col">
+                  <div class="forecast-preview">
+                    <div class="forecast-day">${day}</div>
+                    <img src="icons/01d.png" width="60" height="60" />
+                    <div class="forecast-temperature">
+                      <span class="forecast-temperature-max">26°</span> /
+                      <span class="forecast-temperature-min">19°</span>
+                    </div>
+                  </div>
+                </div>
+              `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
 }
 
 function celsiusConversion(event) {
