@@ -116,23 +116,6 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
-function celsiusConversion(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let mainTempElement = document.querySelector("#main-temp");
-  mainTempElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-function fahrenheitConversion(event) {
-  event.preventDefault();
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  let mainTempElement = document.querySelector("#main-temp");
-  mainTempElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
 currentTime();
 
 let celsiusTemperature = null;
@@ -141,9 +124,3 @@ navigator.geolocation.getCurrentPosition(showPosition);
 
 let citySearch = document.querySelector("#city-search");
 citySearch.addEventListener("submit", handleSubmit);
-
-let celsiusLink = document.querySelector("#celsius-unit");
-celsiusLink.addEventListener("click", celsiusConversion);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-unit");
-fahrenheitLink.addEventListener("click", fahrenheitConversion);

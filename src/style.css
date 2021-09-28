@@ -64,24 +64,6 @@ body {
   top: -34px;
 }
 
-.weather .unit a {
-  text-decoration: none;
-  color: #ffcab0;
-}
-
-.weather .unit a:hover {
-  color: #e46161;
-}
-
-.weather .unit .active {
-  cursor: default;
-  color: #212529;
-}
-
-.weather .unit .active:hover {
-  color: #212529;
-}
-
 .weather-forecast {
   text-align: center;
   margin: 40px 0;
